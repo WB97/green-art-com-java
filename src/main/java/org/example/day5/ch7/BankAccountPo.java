@@ -8,12 +8,12 @@ public class BankAccountPo {
         return balance;
     }
 
-    static int withdraw(int amount) {
+    public static int withdraw(int amount) {
         balance += amount;
         return balance;
     }
 
-    static int checkMyBalance() {
+    public static int checkMyBalance() {
         System.out.println("잔액: " + balance);
         return balance;
     }
