@@ -1,9 +1,9 @@
 package org.example;
 
+import org.example.day6.ch9.AccessLevelModifiers;
+
 public class Main {
     public static void main(String[] args) {
-        String a = "2asd";
 
-        System.out.println(a.hashCode());
     }
 }
