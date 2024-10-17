@@ -8,7 +8,6 @@ public class MissionExt {
 
         String ext = filename.substring(lastIndex+1);
 
-
         System.out.println(ext);
     }
 }
