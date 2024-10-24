@@ -1,10 +1,10 @@
 package org.example.day12.blackjack;
 
+import java.util.List;
+
 public class CardTest {
     public static void main(String[] args) {
         CardDeck deck = new CardDeck();
-        deck.init();
-        deck.shuffle();
         Card c = deck.draw();
         while(true) {
             Card card = deck.draw();
@@ -15,3 +15,7 @@ public class CardTest {
 //        System.out.println(deck.getDenomination(1));
     }
 }
+
+
+
+

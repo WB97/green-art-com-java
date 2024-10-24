@@ -8,8 +8,11 @@ public class CardDeck {
 
     public CardDeck() {
         cards = new Card[52];
+        init();
+        shuffle();
     }
 
+    // 카드 생성
     public void init() {
         int size = 0;
         for(int i = 0; i < patterns.length; i++) {
@@ -17,10 +20,8 @@ public class CardDeck {
                 cards[size++] = new Card(patterns[i], getDenomination(i2));
             }
         }
-//        for (Card card : cards) {
-//            System.out.println(card);
-//        }
     }
+
     public String getDenomination(int n) {
         String result;
         if(n == 1) {
@@ -39,17 +40,14 @@ public class CardDeck {
         return result;
     }
 
-    public void shuffle() {
+    // 섞기
+    private void shuffle() {
         for(int i=0; i<cards.length; i++) {
             int ran = (int)(Math.random()*52);
             Card temp = cards[i];
             cards[i] = cards[ran];
             cards[ran] = temp;
         }
-
-//        for (Card card : cards) {
-//            System.out.println(card);
-//        }
     }
 
     public Card draw() {
