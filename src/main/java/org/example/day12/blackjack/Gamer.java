@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Gamer {
     private final List<Card> cards;
-    private int point;
+    protected int point;
 
     public Gamer() {
         cards = new ArrayList<>();
@@ -15,7 +15,7 @@ public class Gamer {
         cards.add(card);
         int point = switch (card.getDenomination()) {
             case "A" -> 1;
-            case "J", "k", "Q" -> 10;
+            case "J", "K", "Q" -> 10;
             default -> Integer.parseInt(card.getDenomination());
         };
         this.point += point;

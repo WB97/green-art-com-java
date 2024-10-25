@@ -20,17 +20,12 @@ public class MyArrayList {
 //    }
 
     public void add(int n) {
-        if (maxSize == currentIdx) {
-            maxSize += 1;
-            int[] arr2 = new int[maxSize];
-            for (int i = 0; i < arr.length; i++) {
-                arr2[i] = arr[i];
-            }
-            arr2[currentIdx++] = n;
-            arr = arr2;
-        } else {
-            arr[currentIdx++] = n;
+        int[] temp = new int[arr.length+1];
+        for (int i = 0; i < arr.length; i++) {
+            temp[i] = arr[i];
         }
+        temp[arr.length] = n;
+        arr = temp;
     }
 
     public int size() {
@@ -47,7 +42,7 @@ public class MyArrayList {
         if(arr.length == 0) {
             return -1;
         }
-        int result = 0;
+        int result;
         int lastIdx = arr.length-1;
         result = arr[lastIdx];
         int[] tempArr = new int[lastIdx];
